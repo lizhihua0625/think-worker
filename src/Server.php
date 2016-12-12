@@ -35,6 +35,7 @@ abstract class Server
         $this->worker = new Worker($this->socket ?: $this->protocol . '://' . $this->host . ':' . $this->port);
         // 设置进程数
         $this->worker->count = $this->processes;
+
         // 初始化
         $this->init();
 
